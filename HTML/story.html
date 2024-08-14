@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../JS/code.js" type="text/javascript" charset="utf-8" async defer></script>
+        <title>Story</title>
+        <meta name="description" content="A browser-based text oriented game about a man that visit his countryside hometown and has several interactions with the townspeople but there's something .. odd? (With each ending achieved, more information is provided)">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="story-body" onload="chooseDialogue();updateProgValues();unlockFourthChoice();">
+        <section class="progress-bars">
+            <section class="progress-bar" style="flex:1 1 auto">
+                <p class="progress-name-1">Friendliness</p>
+                <progress class="friendly-bar" value="0" max="100" onmouseover="showProgress('friendly-bar')" onmouseout="hideProgress('friendly-bar')"></progress>
+                <p class="popup" id="friendly-value"></p>
+            </section>
+
+            <section class="progress-bar" style="flex:1 1 auto">
+                <p class="progress-name-2">Rudeness</p>
+                <progress class="rude-bar" value="0" max="100" onmouseover="showProgress('rude-bar')" onmouseout="hideProgress('rude-bar')"></progress>
+                <p class="popup" id="rude-value"></p>
+            </section>
+
+            <section class="progress-bar" style="flex:1 1 auto">
+                <p class="progress-name-3">Solitude</p>
+                <progress class="solitude-bar" value="0" max="100" onmouseover="showProgress('solitude-bar')" onmouseout="hideProgress('solitude-bar')"></progress>
+                <p class="popup" id="solitude-value"></p>
+            </section>
+         <section class="confirm-prompt">
+            <label class="progress-prompt" for="progress"></label>
+            <button class="confirm-btn" type="submit" onclick="hideConfirmPrompt();">OK</button>
+        </section>
+
+
+        </section>
+
+        <section class="dropdown-menu">
+            <button class="dropdown-btn">Menu</button>
+            <section class="dropdown-content">
+                <a class='drop-menu-item' onclick="checkEndingProg();">Check_Progress</a>
+                <a href="Index.html">Restart_Game</a>
+            </section>
+        </section>
+        <!-- add changeChoice(); function -->
+        <button class="dialogue-btn" type="submit" onclick="chooseDialogue();">Next Chapter &#10148;</button>
+
+        <section class="content">
+            <header class="place"></header>
+            <p id="dialogue"></p>
+        </section>
+
+        <section class="choices">
+            <p class="choice" style="flex:1 1 100px;" onclick="dialogueVariation('A');"> Good choice </p>
+            <p class="choice" style="flex:1 1 100px;" onclick="dialogueVariation('B');"> Bad Choice </p>
+            <p class="choice" style="flex:1 1 100px;" onclick="dialogueVariation('C');"> Neutral Choice </p>
+            <p class="special-choice" style="flex:1 1 100px;" onclick="inspect();"> Inspect choice </p> 
+            <p class="final-choiceA" style="flex:1 1 100px;" onclick="chooseEnding(true, 'Red')"> "Oh I'm not going anywhere anytime soon." *Stay with them* </p>
+            <p class="final-choiceB" style="flex:1 1 100px;" onclick="chooseEnding(true, 'Blue')"> *smiles warmly and queitly sobs* "Where I should’ve headed to from the very beginning" </p>
+            <!-- should be lock until other value is present -->
+        </section>
+
+    </body>
+</html>

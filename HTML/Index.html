@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>The Poppies' Meaning</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../CSS/style.css">
+	<script src="../JS/code.js" type="text/javascript" charset="utf-8" async defer></script>
+	<meta name="description" content="A browser-based text oriented game about a man that visit his countryside hometown and has several interactions with the townspeople but there's something .. odd? (With each ending achieved, more information is provided)"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body id="main-page-body">
+	<audio autobuffer autoloop loop id="chill-music" volume="0.3">
+		<source src="../Audio/Chillax.mp3" type="audio/mpeg">
+		Your browser does not support this audio format.
+	</audio>
+	<img id="music-icon" src="../Images/Music-toggle-icon.png" alt="A Music Icon" style="align-self: flex-start; justify-self: flex-end;"; onClick ="toggleSound();">
+
+	<section class="main-menu-container">
+
+		<h1 class="title" style="flex:1 1 250px;">The Poppies' Meaning</h1>
+
+		<ul class="main-menu" style="flex:1 1 250px;">
+			<a href=".\introduction.html"><li class="menu-item" style="flex:1 1 250px;">New_Game</li></a>
+			<a href="#"><li class="menu-item" style="flex:1 1 250px;" onclick="pageTravel('Story')">Load_Game</li></a>
+			<a href="about.html"><li class="menu-item" style="flex:1 1 250px;">About_Game</li></a>
+			<a href="#"><li class="menu-item" style="flex:1 1 250px;" onclick="deleteSavedData();">Delete_All_Progress</li></a>
+			<a href="achievements.html"><li class="menu-item" style="flex:1 1 250px;">Achievements</li></a>
+		</ul>
+
+	</section>
+
+	<aside id="game-quote" style="flex:1 1 250px;">
+		"Everything has a meaning.
+		Whether it is <span id="positive">Beneficial</span> or <span id="negative">Detrimental</span> depends on the individuals actions and perspective."
+	</aside>
+
+	<footer class="main-page-footer">Created by YG - <a href="https://discord.gg/SAMybKCqa9"><img class="discord-logo" src="../Images/Discord Logo.png" alt="Discord Logo image"></a></footer>
+</body>
+
+</html>
